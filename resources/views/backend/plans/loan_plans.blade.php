@@ -1,6 +1,23 @@
 @extends('admin.header')
 @section('admin')
 
+<style>
+tr {
+    line-height: 40px;
+    border: 1px solid blue;
+}
+
+td {
+    line-height: 20px;
+    border: 1px solid red;
+}
+
+td p {
+    margin: 0;
+    font-size: 20px;
+}
+</style>
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-4">

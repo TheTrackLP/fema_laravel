@@ -37,6 +37,7 @@ Route::middleware(['auth', 'usertype:admin'])->group(function () {
 
     Route::controller(LoanController::class)->group(function (){
         Route::get('loan/list', 'LoanList')->name('loan.list');
+        Route::post('/application/add', 'AddApplication')->name('add.application');
     });
 
     Route::controller(DepartmentController::class)->group(function (){
