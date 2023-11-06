@@ -51,8 +51,10 @@
                         <div class="form-group col-md-4">
                             <label for="">Department</label>
                             <select name="department" class="form-control">
-                                <option value="1">Example1</option>
-                                <option value="2">Example2</option>
+                                <option value="0" disable>Select Department</option>
+                                @foreach($depts as $dept)
+                                <option value="{{ $dept->id }}">{{ $dept->department }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group col-md-4">

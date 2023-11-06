@@ -11,10 +11,12 @@ class BorrowerController extends Controller
 {
     public function BorrowerList(){
         $borrowers = DB::table('borrowers')
-        ->select('*')
-        ->selectRaw("CONCAT(lastname, ', ', firstname, ' ', middlename) as name")
+        ->select('borrowers.*', DB::raw("CONCAT(borrowers.lastname, ', ', borrowers.firstname, ' ', borrowers.middlename) as name, CONCAT(departments.department) as dept"))
+        ->join('departments', 'departments.id', '=', 'borrowers.department')
         ->get();
-        return view('backend.borrower.borrowers', compact('borrowers'));
+
+        $depts = DB::table('departments')->get();
+        return view('backend.borrower.borrowers', compact('borrowers', 'depts'));
     }
 
     public function AddBorrower(Request $request){

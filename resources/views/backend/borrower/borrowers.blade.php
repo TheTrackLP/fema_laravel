@@ -13,11 +13,11 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <colgroup>
                         <col width="5%">
-                        <col width="14%">
-                        <col width="14%">
-                        <col width="14%">
+                        <col width="25%">
+                        <col width="12%">
+                        <col width="20%">
                         <col width="5%">
-                        <col width="14%">
+                        <col width="10%">
                         <col width="13%">
                     </colgroup>
                     <thead>
@@ -26,7 +26,7 @@
                             <th class="text-center">Borrower's Name</th>
                             <th class="text-center">Shared Capital</th>
                             <th class="text-center">Department</th>
-                            <th class="text-center">Staus</th>
+                            <th class="text-center">Status</th>
                             <th class="text-center">Date</th>
                             <th class="text-center">Action</th>
                         </tr>
@@ -40,11 +40,11 @@
                             <td>
                                 {{ $borrower->name }}
                             </td>
-                            <td>
+                            <td class="text-center">
                                 {{ number_format($borrower->shared_capital, 2) }}
                             </td>
                             <td>
-                                {{ $borrower->department }}
+                                {{ $borrower->dept }}
                             </td>
                             <td class="text-center">
                                 @if($borrower->status == 0)
