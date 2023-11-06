@@ -28,17 +28,17 @@
     <hr class="sidebar-divider my-0">
 
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route('borrowers.list') }}">
             <i class="fas fa-list"></i>
-            <span>Employee List</span></a>
+            <span>Borrowers</span></a>
     </li>
 
     <hr class="sidebar-divider my-0">
 
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route('loan.list') }}">
             <i class="fas fa-user-check"></i>
-            <span>Attendace</span></a>
+            <span>Loans</span></a>
     </li>
 
     <hr class="sidebar-divider my-0">
@@ -46,7 +46,7 @@
     <li class="nav-item">
         <a class="nav-link" href="#">
             <i class="fas fa-list"></i>
-            <span class="text-">Projects</span></a>
+            <span>Payments</span></a>
     </li>
 
     <hr class="sidebar-divider my-0">
@@ -54,7 +54,7 @@
     <li class="nav-item">
         <a class="nav-link" href="#">
             <i class="fas fa-list"></i>
-            <span class="text-">Tasks</span></a>
+            <span>Loan Plans</span></a>
     </li>
 
     <hr class="sidebar-divider my-0">
@@ -62,7 +62,7 @@
     <li class="nav-item">
         <a class="nav-link" href="#">
             <i class="fas fa-list"></i>
-            <span class="text-">Leave Management</span></a>
+            <span>Reports</span></a>
     </li>
 
     <hr class="sidebar-divider my-0">
@@ -70,7 +70,15 @@
     <li class="nav-item">
         <a class="nav-link" href="tables.html">
             <i class="fas fa-users"></i>
-            <span class="text-">Users</span></a>
+            <span>Users/Borrowers</span></a>
+    </li>
+
+    <hr class="sidebar-divider my-0">
+
+    <li class="nav-item">
+        <a class="nav-link" href="tables.html">
+            <i class="fas fa-users"></i>
+            <span>Departments</span></a>
     </li>
 
     <hr class="sidebar-divider my-0">

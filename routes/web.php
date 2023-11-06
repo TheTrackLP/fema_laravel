@@ -3,6 +3,9 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Backend\BorrowerController;
+use App\Http\Controllers\Backend\LoanController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +28,15 @@ Route::get('/dashboard', function () {
 
 Route::middleware(['auth', 'usertype:admin'])->group(function () {
     Route::get('/admin/dashboard',[AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
+
+    Route::controller(BorrowerController::class)->group(function (){
+        Route::get('/borrowers/list', 'BorrowerList')->name('borrowers.list');
+        Route::post('/borrowers/add', 'AddBorrower')->name('borrowers.add');
+    });
+
+    Route::controller(LoanController::class)->group(function (){
+        Route::get('loan/list', 'LoanList')->name('loan.list');
+    });
 });
 
 require __DIR__.'/auth.php';

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->longText('address')->nullable();
             $table->string('emp_id')->nullable();
             $table->date('date_birth')->nullable();
+            $table->tinyInteger('year_service')->nullable();
             $table->string('department')->nullable();
             $table->tinyInteger('status')->nullable();
             $table->integer('shared_capital')->nullable();
