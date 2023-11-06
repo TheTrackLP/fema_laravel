@@ -6,7 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\BorrowerController;
 use App\Http\Controllers\Backend\LoanController;
 use App\Http\Controllers\Backend\DepartmentController;
-
+use App\Http\Controllers\Backend\LoanPlanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +42,11 @@ Route::middleware(['auth', 'usertype:admin'])->group(function () {
     Route::controller(DepartmentController::class)->group(function (){
         Route::get('/departments', 'DepartmentList')->name('department.list');
         Route::post('department/add', 'AddDept')->name('dept.add');
+    });
+
+    Route::controller(LoanPlanController::class)->group(function (){
+        Route::get('/plans', 'LoanPLans')->name('loan.plan');
+        Route::post('/plan/add', 'AddPlans')->name('add.plan');
     });
 });
 

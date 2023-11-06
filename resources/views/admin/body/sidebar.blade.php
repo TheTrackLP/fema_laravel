@@ -52,7 +52,7 @@
     <hr class="sidebar-divider my-0">
 
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route('loan.plan') }}">
             <i class="fas fa-list"></i>
             <span>Loan Plans</span></a>
     </li>
