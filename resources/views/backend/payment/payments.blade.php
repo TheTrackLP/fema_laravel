@@ -19,13 +19,12 @@ p {
                     New Payments
                 </button>
                 <table class="table table-hover" id="dataTable">
-                    <thead>
+                    <thead class="table-dark">
                         <tr>
                             <th class="text-center">#</th>
                             <th class="text-center">Reference/OR #</th>
                             <th class="text-center">Borrower's Details</th>
                             <th class="text-center">Amount</th>
-                            <th class="text-center">Penalty</th>
                             <th class="text-center">Date</th>
                             <th class="text-center">Action</th>
                         </tr>
@@ -48,13 +47,16 @@ p {
                                 <p>Plan: <b>{{ $payment->plan_loan }}</b></p>
                             </td>
                             <td>
-                                <p>Balance: <b>{{ number_format($payment->paid, 2) }}</b></p>
-                                <p>Principal: <b>{{ number_format($payment->paid, 2) }}</b></p>
-                                <p>Interest: <b>{{ number_format($payment->interest, 2) }}</b></p>
-                                <p>Capital: <b>{{ number_format($payment->capital, 2) }}</b></p>
-                            </td>
-                            <td class="text-center">
-                                Penalty
+                                <div class="d-flex">
+                                    <p>Balance: <b>{{ number_format($payment->paid, 2) }}</b></p>
+                                    <p>&nbsp;Principal: <b>{{ number_format($payment->paid, 2) }}</b></p>
+                                </div>
+                                <div class="d-flex">
+                                    <p>Interest: <b>{{ number_format($payment->interest, 2) }}</b></p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Capital:
+                                        <b>{{ number_format($payment->capital, 2) }}</b>
+                                    </p>
+                                </div>
                             </td>
                             <td class="text-center">
                                 <p>{{ date('M d, Y', strtotime($payment->created_at)) }}</p>

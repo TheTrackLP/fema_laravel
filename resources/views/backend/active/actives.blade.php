@@ -14,7 +14,7 @@
                 </div>
                 <br>
                 <table class="table table-hover" id="ActiveTable">
-                    <thead class="table-primary">
+                    <thead class="table-dark">
                         <tr>
                             <th class="text-center">#</th>
                             <th class="text-center">CV#</th>

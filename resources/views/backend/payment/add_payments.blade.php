@@ -79,8 +79,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-success">Save</button>
-                    <button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-success px-5">Save</button>
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-danger px-5">Close</button>
                 </div>
             </div>
         </div>

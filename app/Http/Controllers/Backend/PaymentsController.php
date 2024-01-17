@@ -71,7 +71,10 @@ class PaymentsController extends Controller
         ]);
 
         if($valid->fails()){
-            $fails = array();
+            $fails = array(
+                'message' => 'Error, Try Again!',
+                'alert-type' => 'error',
+            );
             return redirect()->route('all.payments')->with($fails);
         } else {
             

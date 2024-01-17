@@ -27,7 +27,7 @@
                         <h3 class="text-gray-900">Departments</h3>
                     </div>
                     <table class="table table-hovered">
-                        <thead class="thead-dark">
+                        <thead class="table-dark">
                             <tr>
                                 <th class="text-center">#</th>
                                 <th class="text-center">Departments</th>
