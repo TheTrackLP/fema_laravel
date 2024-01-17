@@ -48,7 +48,7 @@
                             </div>
                             <div class="col-md-4">
                                 <label for="" class="text-gray-900">Years of Service</label>
-                                <select name="year_service" class="form-control select2">
+                                <select name="year_service" class="form-control">
                                     <option value="" disabled selected>Select Year of Serive</option>
                                     <option value="1">1-4 Years</option>
                                     <option value="2">5-9 Years</option>
@@ -96,8 +96,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-success">Save</button>
-                    <button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-success px-5">Save</button>
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-danger px-5">Close</button>
                 </div>
             </div>
         </div>
@@ -106,7 +106,7 @@
 <script>
 $('.select2').select2({
     placeholder: "Please select here",
-    dropdownParent: $('#AddBorrowers'),
-    width: "100%".
+    width: "100%",
+    dropdownParent: $("#AddBorrowers")
 })
 </script>

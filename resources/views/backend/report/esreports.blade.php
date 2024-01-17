@@ -26,7 +26,7 @@ p {
                 </div>
                 <br>
                 <table class="table table-hover" id="">
-                    <thead>
+                    <thead class="table-dark">
                         <tr>
                             <th class="text-center">#</th>
                             <th class="text-center">Reference/OR #</th>
