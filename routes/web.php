@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\Backend\BorrowerController;
 use App\Http\Controllers\Backend\DepartmentController;
 use App\Http\Controllers\Backend\PlanController;
@@ -87,7 +88,8 @@ Route::middleware(['auth', 'usertype:admin'])->group(function (){
 });
 
 Route::middleware(['auth', 'usertype:user'])->group(function (){
-    Route::get('/user/dashboard', [AdminController::class, 'UserDashboard'])->name('user.dashboard');
+    Route::get('/user/dashboard', [UserController::class, 'UserDashboard'])->name('user.dashboard');
+    Route::get('/user/logout', [UserController::class, 'UserLogout'])->name('user.logout');
 });
 
 
